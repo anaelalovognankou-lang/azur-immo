@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Azur Immo — Votre agence immobilière au Bénin</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Open Graph WhatsApp -->
+<meta property="og:title" content="Azur Immo — Immobilier au Bénin" />
+<meta property="og:description" content="Trouvez votre bien idéal au Bénin. Villas, appartements, studios à Cotonou, Porto-Novo et Parakou." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" />
+<meta property="og:type" content="website" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>" />
+</head>
+<body font-family: 'Inter', sans-serif;>
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-azur">Azur</span>
+        <span class="logo-immo">Immo</span>
+      </div>
+      <div class="burger" id="burger">
+       <span></span>
+       <span></span>
+       <span></span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#biens">Nos Biens</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#apropos">À Propos</a></li>
+          <li><a href="#contact" class="nav-cta">Nous Contacter</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+   
+<section id="accueil">
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Trouvez le bien <span>qui vous ressemble</span></h1>
+      <p>Azur Immo vous accompagne dans vos projets immobiliers au Bénin et pour la diaspora</p>
+      <div class="hero-buttons">
+        <a href="#biens" class="btn-primary">Voir nos biens</a>
+        <a href="#contact" class="btn-secondary">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- BIENS EN VEDETTE -->
+<section id="vedette">
+  <div class="section-container">
+    <div class="section-header">
+      <h2>Biens en <span>Vedette</span></h2>
+      <p>Découvrez notre sélection de biens d'exception</p>
+    </div>
+    <div class="vedette-grid">
+
+      <div class="bien-card">
+        <div class="bien-image">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800" alt="Villa Cotonou"/>
+          <span class="bien-badge">Vente</span>
+        </div>
+        <div class="bien-info">
+          <h3>Villa moderne</h3>
+          <p class="bien-lieu">📍 Cotonou, Cadjehoun</p>
+          <p class="bien-prix">85 000 000 FCFA</p>
+          <a class="btn-whatsapp" href="https://wa.me/2290192951012?text=Bonjour, je suis intéressé par la Villa moderne à Cadjehoun - 85 000 000 FCFA" target="_blank">
+            💬 Contacter sur WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="bien-card">
+        <div class="bien-image">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800" alt="Appartement Porto-Novo"/>
+          <span class="bien-badge location">Location</span>
+        </div>
+        <div class="bien-info">
+          <h3>Appartement standing</h3>
+          <p class="bien-lieu">📍 Porto-Novo, Centre</p>
+          <p class="bien-prix">150 000 FCFA / mois</p>
+          <a class="btn-whatsapp" href="https://wa.me/2290192951012?text=Bonjour, je suis intéressé par l'Appartement standing à Porto-Novo - 150 000 FCFA/mois" target="_blank">
+            💬 Contacter sur WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="bien-card">
+        <div class="bien-image">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800" alt="Studio Parakou"/>
+          <span class="bien-badge location">Location</span>
+        </div>
+        <div class="bien-info">
+          <h3>Studio meublé</h3>
+          <p class="bien-lieu">📍 Parakou, Banikanni</p>
+          <p class="bien-prix">60 000 FCFA / mois</p>
+          <a class="btn-whatsapp" href="https://wa.me/2290192951012?text=Bonjour, je suis intéressé par le Studio meublé à Parakou - 60 000 FCFA/mois" target="_blank">
+            💬 Contacter sur WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NOS BIENS AVEC FILTRES -->
+<section id="biens">
+  <div class="section-container">
+    <div class="section-header">
+      <h2>Nos <span>Biens</span></h2>
+      <p>Trouvez le bien qui correspond à vos critères</p>
+    </div>
+
+    <!-- FILTRES -->
+    <div class="filtres">
+      <select id="filtre-type">
+        <option value="tous">Tous les types</option>
+        <option value="studio">Studio</option>
+        <option value="appartement">Appartement</option>
+        <option value="villa">Villa</option>
+      </select>
+
+      <select id="filtre-transaction">
+        <option value="tous">Location & Vente</option>
+        <option value="location">Location</option>
+        <option value="vente">Vente</option>
+      </select>
+
+      <select id="filtre-ville">
+        <option value="tous">Toutes les villes</option>
+        <option value="cotonou">Cotonou</option>
+        <option value="porto-novo">Porto-Novo</option>
+        <option value="parakou">Parakou</option>
+      </select>
+    </div>
+
+    <!-- GRILLE DES BIENS -->
+    <div class="biens-grid" id="biens-grid">
+      <p id="no-results" style="display:none; text-align:center; padding: 40px; color:#888; font-size:1rem; width:100%;">Aucun bien ne correspond à votre recherche. Essayez d'autres filtres.</p>
+
+      <div class="bien-card" data-type="villa" data-transaction="vente" data-ville="cotonou">
+        <div class="bien-image">
+          <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800" alt="Villa Cotonou"/>
+          <span class="bien-badge">Vente</span>
+        </div>
+        <div class="bien-info">
+          <h3>Villa moderne</h3>
+          <p class="bien-lieu">📍 Cotonou, Cadjehoun</p>
+          <p class="bien-prix">85 000 000 FCFA</p>
+          <a class="btn-whatsapp" href="https://wa.me/2290192951012?text=Bonjour, je suis intéressé par la Villa moderne à Cadjehoun" target="_blank">💬 Contacter sur WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="bien-card" data-type="appartement" data-transaction="location" data-ville="porto-novo">
+        <div class="bien-image">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800" alt="Appartement Porto-Novo"/>
+          <span class="bien-badge location">Location</span>
+        </div>
+        <div class="bien-info">
+          <h3>Appartement standing</h3>
+          <p class="bien-lieu">📍 Porto-Novo, Centre</p>
+          <p class="bien-prix">150 000 FCFA / mois</p>
+          <a class="btn-whatsapp" href="https://wa.me/2290192951012?text=Bonjour, je suis intéressé par l'Appartement à Porto-Novo" target="_blank">💬 Contacter sur WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="bien-card" data-type="studio" data-transaction="location" data-ville="parakou">
+        <div class="bien-image">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800" alt="Studio Parakou"/>
+          <span class="bien-badge location">Location</span>
+        </div>
+        <div class="bien-info">
+          <h3>Studio meublé</h3>
+          <p class="bien-lieu">📍 Parakou, Banikanni</p>
+          <p class="bien-prix">60 000 FCFA / mois</p>
+          <a class="btn-whatsapp" href="https://wa.me/2290192951012?text=Bonjour, je suis intéressé par le Studio à Parakou" target="_blank">💬 Contacter sur WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="bien-card" data-type="villa" data-transaction="vente" data-ville="cotonou">
+        <div class="bien-image">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="Villa Fidjrossè"/>
+          <span class="bien-badge">Vente</span>
+        </div>
+        <div class="bien-info">
+          <h3>Villa avec piscine</h3>
+          <p class="bien-lieu">📍 Cotonou, Fidjrossè</p>
+          <p class="bien-prix">120 000 000 FCFA</p>
+          <a class="btn-whatsapp" href="https://wa.me/2290192951012?text=Bonjour, je suis intéressé par la Villa avec piscine à Fidjrossè" target="_blank">💬 Contacter sur WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="bien-card" data-type="appartement" data-transaction="location" data-ville="cotonou">
+        <div class="bien-image">
+          <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800" alt="Appartement Cotonou"/>
+          <span class="bien-badge location">Location</span>
+        </div>
+        <div class="bien-info">
+          <h3>Appartement 3 pièces</h3>
+          <p class="bien-lieu">📍 Cotonou, Akpakpa</p>
+          <p class="bien-prix">120 000 FCFA / mois</p>
+          <a class="btn-whatsapp" href="https://wa.me/2290192951012?text=Bonjour, je suis intéressé par l'Appartement 3 pièces à Akpakpa" target="_blank">💬 Contacter sur WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="bien-card" data-type="studio" data-transaction="location" data-ville="porto-novo">
+        <div class="bien-image">
+          <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=800" alt="Studio Porto-Novo"/>
+          <span class="bien-badge location">Location</span>
+        </div>
+        <div class="bien-info">
+          <h3>Studio moderne</h3>
+          <p class="bien-lieu">📍 Porto-Novo, Ouando</p>
+          <p class="bien-prix">50 000 FCFA / mois</p>
+          <a class="btn-whatsapp" href="https://wa.me/2290192951012?text=Bonjour, je suis intéressé par le Studio moderne à Ouando" target="_blank">💬 Contacter sur WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NOS SERVICES -->
+<section id="services">
+  <div class="section-container">
+    <div class="section-header">
+      <h2>Nos <span>Services</span></h2>
+      <p>Nous vous accompagnons à chaque étape de votre projet</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Vente immobilière</h3>
+        <p>Nous vous aidons à vendre votre bien au meilleur prix grâce à notre réseau et notre expertise du marché béninois.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔑</div>
+        <h3>Location</h3>
+        <p>Studios, appartements, villas — nous trouvons le bien en location qui correspond à votre budget et vos besoins.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🌍</div>
+        <h3>Service Diaspora</h3>
+        <p>Vous êtes à l'étranger ? Nous gérons tout pour vous — visites, vérifications, paperasse — à distance en toute confiance.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>Gestion locative</h3>
+        <p>Confiez-nous votre bien, nous gérons les locataires, les loyers et l'entretien à votre place.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">⚖️</div>
+        <h3>Conseil juridique</h3>
+        <p>Accompagnement dans les démarches légales, contrats de bail, titres fonciers et sécurisation de vos transactions.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📐</div>
+        <h3>Estimation gratuite</h3>
+        <p>Vous voulez connaître la valeur de votre bien ? Nos experts vous offrent une estimation gratuite et sans engagement.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section id="temoignages">
+  <div class="section-container">
+    <div class="section-header">
+      <h2>Ce que disent <span>nos clients</span></h2>
+      <p>Ils nous ont fait confiance, voici leur expérience</p>
+    </div>
+    <div class="temoignages-grid">
+
+      <div class="temoignage-card">
+        <div class="temoignage-etoiles">★★★★★</div>
+        <p>"J'étais à Paris et je voulais investir à Cotonou sans me déplacer. Azur Immo a tout géré pour moi — visites, contrat, remise des clés. Sérieux et professionnel."</p>
+        <div class="temoignage-auteur">
+          <div class="auteur-avatar">KA</div>
+          <div>
+            <strong>Kofi Ahouansou</strong>
+            <span>Paris, France 🇫🇷</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="temoignage-card">
+        <div class="temoignage-etoiles">★★★★★</div>
+        <p>"En moins de deux jours j'avais trouvé mon appartement à Akpakpa. L'équipe est réactive, disponible sur WhatsApp et les prix sont honnêtes."</p>
+        <div class="temoignage-auteur">
+          <div class="auteur-avatar">MS</div>
+          <div>
+            <strong>Mariame Soglohoun</strong>
+            <span>Cotonou, Bénin 🇧🇯</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="temoignage-card">
+        <div class="temoignage-etoiles">★★★★★</div>
+        <p>"Azur Immo m'a aidé à vendre ma villa rapidement et au bon prix. Je recommande sans hésiter à toute la diaspora qui veut investir au Bénin en toute sécurité."</p>
+        <div class="temoignage-auteur">
+          <div class="auteur-avatar">BD</div>
+          <div>
+            <strong>Brice Dossou</strong>
+            <span>Montréal, Canada 🇨🇦</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- À PROPOS -->
+<section id="apropos">
+  <div class="section-container">
+    <div class="apropos-wrapper">
+
+      <div class="apropos-image">
+        <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800" alt="Équipe Azur Immo"/>
+        <div class="apropos-badge">
+          <span class="badge-nombre">10+</span>
+          <span class="badge-texte">Années d'expérience</span>
+        </div>
+      </div>
+
+      <div class="apropos-contenu">
+        <h2>Qui sommes <span>nous ?</span></h2>
+        <p class="apropos-intro">Azur Immo est une agence immobilière béninoise fondée avec une mission claire : rendre l'accès à la propriété simple, sûr et accessible à tous.</p>
+        <p>Que vous soyez à Cotonou, à Porto-Novo ou à l'autre bout du monde, nous mettons notre expertise locale au service de votre projet immobilier.</p>
+
+        <div class="apropos-chiffres">
+          <div class="chiffre">
+            <strong>250+</strong>
+            <span>Biens vendus</span>
+          </div>
+          <div class="chiffre">
+            <strong>500+</strong>
+            <span>Clients satisfaits</span>
+          </div>
+          <div class="chiffre">
+            <strong>3</strong>
+            <span>Villes couvertes</span>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-primary">Nous contacter</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-container">
+    <div class="section-header">
+      <h2>Nous <span>Contacter</span></h2>
+      <p>Notre équipe est disponible pour répondre à toutes vos questions</p>
+    </div>
+    <div class="contact-wrapper">
+
+      <div class="contact-infos">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <div>
+            <strong>Adresse</strong>
+            <p>Cotonou, Cadjehoun — Bénin</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <div>
+            <strong>Téléphone</strong>
+            <p>+229 00 00 00 00</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <div>
+            <strong>Email</strong>
+            <p>contact@azurimmo.bj</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">⏰</span>
+          <div>
+            <strong>Horaires</strong>
+            <p>Lun — Sam : 8h00 à 18h00</p>
+          </div>
+        </div>
+        <a class="btn-whatsapp-contact" href="https://wa.me/2290192951012?text=Bonjour, j'aimerais avoir plus d'informations sur vos biens immobiliers." target="_blank">
+          💬 Discuter sur WhatsApp
+        </a>
+      </div>
+
+         <form class="contact-form" action="https://formspree.io/f/mbdqpeng" method="POST">
+  
+  <!-- HONEYPOT anti-spam  -->
+  <input type="text" name="_gotcha" style="display:none" />
+  
+  <!-- Redirection après envoi -->
+  <input type="hidden" name="_next" value="https://azur-immo.vercel.app" />
+  <input type="hidden" name="_subject" value="Nouveau message — Azur Immo" />
+
+  <input type="text" name="nom" placeholder="Votre nom complet" required />
+  <input type="email" name="email" placeholder="Votre adresse email" required />
+  <input type="tel" name="telephone" placeholder="Votre numéro de téléphone" />
+  
+  <select name="interet" required>
+    <option value="">Vous êtes intéressé par...</option>
+    <option value="location">Une location</option>
+    <option value="achat">Un achat</option>
+    <option value="vente">Vendre un bien</option>
+    <option value="autre">Autre demande</option>
+  </select>
+  
+  <textarea name="message" placeholder="Votre message..." required></textarea>
+  <button type="submit">Envoyer le message</button>
+
+</form>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-azur">Azur</span>
+          <span class="logo-immo">Immo</span>
+        </div>
+        <p>Votre partenaire immobilier de confiance au Bénin. Nous vous accompagnons dans tous vos projets, où que vous soyez.</p>
+      </div>
+
+      <div class="footer-liens">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#biens">Nos Biens</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#apropos">À Propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-services">
+        <h4>Nos Services</h4>
+        <ul>
+          <li>Vente immobilière</li>
+          <li>Location</li>
+          <li>Service Diaspora</li>
+          <li>Gestion locative</li>
+          <li>Estimation gratuite</li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact rapide</h4>
+        <p>📍 Cotonou, Cadjehoun</p>
+        <p>📞 +229 00 00 00 00</p>
+        <p>✉️ contact@azurimmo.bj</p>
+        <a href="https://wa.me/2290192951012" target="_blank" class="footer-whatsapp">
+          💬 WhatsApp
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 Azur Immo — Tous droits réservés</p>
+    </div>
+
+  </div>
+</footer>
+  <script src="main.js"></script>
+
+</body>
+</html>
